@@ -1,0 +1,85 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Audit API",
+        "description": "API for managing audit logs",
+        "version": "1.0.0"
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "tags": [
+        {
+            "name": "Audit",
+            "description": "API for tracking audit logs"
+        }
+    ],
+    "paths": {
+        "/audits": {
+            "get": {
+                "summary": "Retrieve all audit logs",
+                "description": "Returns a list of audit logs",
+                "tags": [
+                    "Audit"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Audit"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Audit": {
+            "type": "object",
+            "properties": {
+                "action": {
+                    "type": "string",
+                    "example": "User login"
+                },
+                "status": {
+                    "type": "integer",
+                    "example": 200
+                },
+                "errors": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "example": []
+                },
+                "auditBy": {
+                    "type": "string",
+                    "example": "admin"
+                },
+                "auditOn": {
+                    "type": "string",
+                    "format": "date-time",
+                    "example": "2024-02-01T10:00:00Z"
+                },
+                "data": {
+                    "type": "object",
+                    "example": {
+                        "ip": "192.168.1.1",
+                        "browser": "Chrome"
+                    }
+                }
+            }
+        }
+    }
+}

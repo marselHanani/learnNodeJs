@@ -1,0 +1,17 @@
+[2025-02-03 08:34:40] | info: Get all permissions successfully | | data: []
+[2025-02-03 08:35:40] | error: Error creating permission | | data: {}
+[2025-02-03 08:36:43] | error: Error creating permission | | data: {}
+[2025-02-03 08:41:05] | error: Error creating permission | | data: {}
+[2025-02-03 08:50:11] | info: New permission created successfully | | data: {"name":"create-role","_id":"67a067237786dbe89c09e6c0","__v":0}
+[2025-02-03 08:50:25] | info: New permission created successfully | | data: {"name":"delete-role","_id":"67a067317786dbe89c09e6c2","__v":0}
+[2025-02-03 08:50:43] | info: New permission created successfully | | data: {"name":"create-user","_id":"67a067437786dbe89c09e6c4","__v":0}
+[2025-02-03 08:50:49] | info: New permission created successfully | | data: {"name":"delete-user","_id":"67a067497786dbe89c09e6c6","__v":0}
+[2025-02-03 08:51:34] | info: Get all permissions successfully | | data: [{"_id":"67a067237786dbe89c09e6c0","name":"create-role","__v":0},{"_id":"67a067317786dbe89c09e6c2","name":"delete-role","__v":0},{"_id":"67a067437786dbe89c09e6c4","name":"create-user","__v":0},{"_id":"67a067497786dbe89c09e6c6","name":"delete-user","__v":0}]
+[2025-02-03 08:52:10] | info: Permission fetched successfully | | data: {"_id":"67a067497786dbe89c09e6c6","name":"delete-user","__v":0}
+[2025-02-03 08:53:46] | info: Permission fetched successfully | | data: {"_id":"67a067497786dbe89c09e6c6","name":"delete-user","__v":0}
+[2025-02-03 08:54:52] | info: Permission updated successfully | | data: {"_id":"67a067497786dbe89c09e6c6","name":"delete-users","__v":0}
+[2025-02-03 08:57:02] | info: New permission created successfully | | data: {"name":"view","_id":"67a068bec50e70ee5901e9c9","__v":0}
+[2025-02-03 09:08:28] | error: Error fetching permission | | data: {"name":"Permission not found","httpStatusCode":404,"isOptional":false}
+[2025-02-03 09:21:38] | info: Get all permissions successfully | | data: [{"_id":"67a067237786dbe89c09e6c0","name":"create-role","__v":0},{"_id":"67a067317786dbe89c09e6c2","name":"delete-role","__v":0},{"_id":"67a067437786dbe89c09e6c4","name":"create-user","__v":0},{"_id":"67a067497786dbe89c09e6c6","name":"delete-users","__v":0},{"_id":"67a068bec50e70ee5901e9c9","name":"view","__v":0}]
+[2025-02-03 20:25:55] | info: User 'marsel' signed in successfully |
+[2025-02-03 20:26:11] | info: User profile retrieved for user ID: 67a0ac7f84a04768922b73ff |
