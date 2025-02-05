@@ -84,6 +84,8 @@ const userRouter = require('./7_User_Management/router/user.router');
 const roleRouter = require('./7_User_Management/router/role.router');
 const permissionRouter = require('./7_User_Management/router/permission.router');
 const loginRouter = require('./8_Auth/router/login.router');
+const uploadRouter = require('./9_Upload_Download_Files/routes/upload.route');
+const downloadRouter = require('./9_Upload_Download_Files/routes/download.route');
 app.use(express.json());// تنساش تحطها ساعة وانا ادور على الايرور وطلعت ناسي احطها
 const jwt = require('./8_Auth/jwt');
 
@@ -91,6 +93,8 @@ const jwt = require('./8_Auth/jwt');
 app.use('/api/v1/auth',loginRouter);
 app.use('/api/v1',roleRouter);
 app.use('/api/v1',permissionRouter);
+app.use('/api/v1',uploadRouter);// to upload file in your project and stor the metadata in database
+app.use('/api/v1',downloadRouter);// to download file from your project 
 app.use('/api/v1',jwt.verifyToken,jwt.isAdmin,userRouter);
 
 

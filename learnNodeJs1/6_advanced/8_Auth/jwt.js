@@ -68,4 +68,4 @@ exports.generateToken = (user) => {
   // 2️ The client stores the JWT (e.g., in localStorage or cookies).
   // 3️ For protected routes, the client sends the JWT in the `Authorization` header.
   // 4️ Server verifies the token using `verifyToken()` before granting access and sent response.
-  
+//! search about refresh token 
