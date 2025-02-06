@@ -13,4 +13,4 @@ class ApiError extends BaseError {
 }
 module.exports = ApiError;
 
-// now to use it see app.js file inside 6_advanced/app.js
+// now to use it see app.js file inside 7_advanced/app.js

@@ -12,10 +12,10 @@ mongoose.connect("mongodb+srv://marselhanani1:Marsel8042003@cluster0.smbml.mongo
 
 
 //#------->>Advanced<<----------
-const LoggerService = require('../6_advanced/2_Logger/logger.services')
+const LoggerService = require('../7_advanced/2_Logger/logger.services')
 const logger = new LoggerService("Auditing_logger");
 //*-----------> auditing 
-const auditing = require('../6_advanced/3_Auditing/audit');
+const auditing = require('../7_advanced/3_Auditing/audit');
 //?---------------> error handling 
 const ApiError = require('./6_Error_handler/api.error');
 const status = require('./6_Error_handler/error.status')
@@ -60,6 +60,7 @@ app.get('/audits',async (req,res)=>{
 })
 
 //error handling 
+const errhandler = require('./6_Error_handler/errorHandler');
 app.get('/audits/:id', async (req, res, next) => {
     try {
         const { id } = req.params;
@@ -79,6 +80,7 @@ app.get('/audits/:id', async (req, res, next) => {
         next(error); // Pass the error to the error-handling middleware
     }
 });
+app.use(errhandler);
 //*===============================================user Management================================
 const userRouter = require('./7_User_Management/router/user.router');
 const roleRouter = require('./7_User_Management/router/role.router');
